@@ -1,0 +1,33 @@
+int a,b; float c; c=3+(3*3);
+int id; id=3;
+int id,a,b,c,d; id=(a+b)-c/d;
+
+int id,a,b,c,d; id=c+(a+b)*c/c*d-2;
+int id,a,b,c,d; float x; id=c+(a+b)*c/c*d-2;
+
+int a,b; float c,d,f; d= -(a+b/f-b)/a*5; 
+int a,b; char c,d,f; d= c; 
+
+D=-?[0-9]+|-?(([0-9]+[.]?[0-9]*)|([.][0-9]+))(e[+-]?[0-9]+)?
+
+D=[0-9]+|(([0-9]+[.]?[0-9]*)|([.][0-9]+))(e[+-]?[0-9]+)?
+
+
+import java.io.File;
+
+public class Lexer {
+    
+    public static void main(String[] args) 
+    {
+        String ruta = "C:/Users/pablo/OneDrive/Documents/NetBeansProjects/CompiladorLR2/src/Analisis/Lexer.flex"; // donde se encuentra el lexer.flex
+        
+        generarLexer(ruta);
+    }
+    
+    private static void generarLexer(String ruta)
+    {
+        File archivo = new File(ruta);
+        JFlex.Main.generate(archivo);
+    }
+    
+}
